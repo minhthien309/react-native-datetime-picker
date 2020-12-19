@@ -24,8 +24,7 @@ class ScrollingComponent extends Component{
         const defaultValue = 1990 - start;
 
         return(
-            <View style={styles.container}>
-                <Text style={styles.title}>What year were you born?</Text>
+            <View>
                 <Picker {...{ values, defaultValue }} />
             </View>
         );
@@ -52,7 +51,21 @@ export default class ReactNativeDateTimePicker extends Component{
     render(){
         return (
             <View>
-                <ScrollingComponent/>
+                <View style={{flexDirection: 'column', flex: 2}}>
+                   <View style={{flex: 1}}>
+                    <View style={{flexDirection: 'row', flex: 3}}>
+                            <View style={{flex: 1}}>
+                                <ScrollingComponent/>
+                            </View>
+                            <View style={{flex: 1}}>
+                                <ScrollingComponent/>
+                            </View>
+                            <View style={{flex: 1}}>
+                                <ScrollingComponent/>
+                            </View>
+                        </View>
+                   </View>
+                </View>
             </View>
         );
     }
@@ -60,14 +73,14 @@ export default class ReactNativeDateTimePicker extends Component{
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: "black",
-      justifyContent: "center",
-      alignItems: "center",
+        flex: 1,
+        backgroundColor: "black",
+        justifyContent: "center",
+        alignItems: "center",
     },
     title: {
-      color: "white",
-      fontSize: 24,
-      marginBottom: 31,
+        color: "white",
+        fontSize: 24,
+        marginBottom: 31,
     },
 });

@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	label: {
-		color: "white",
+		color: "black",
 		// fontFamily: "SFProText-Semibold",
 		fontSize: 24,
 		lineHeight: ITEM_HEIGHT,
@@ -78,7 +78,7 @@ const Picker = ({ values, defaultValue }) => {
 		<View style={styles.container}>
 				<MaskedView {...{ maskElement }}>
 					<View style={{ height: ITEM_HEIGHT * 2, backgroundColor: "grey" }} />
-					<View style={{ height: ITEM_HEIGHT, backgroundColor: "white" }} />
+					<View style={{ height: ITEM_HEIGHT, backgroundColor: "grey" }} />
 					<View style={{ height: ITEM_HEIGHT * 2, backgroundColor: "grey" }} />
 				</MaskedView>
 				<View style={StyleSheet.absoluteFill}>
